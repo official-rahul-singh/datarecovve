@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SiteName</title>
+        <!-- preload fonts -->
+        <link rel="preload" href="assets/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/inter-tight-v7-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/inter-tight-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- favicon -->
+        <link rel="icon" href="assets/img/fav icon.png">
+        <style>
+        /* inter-tight-regular - latin */
+        @font-face {  
+        font-display: swap; 
+        font-family: 'Inter Tight';
+        font-style: normal;
+        font-weight: 400;
+        src: url('assets/fonts/inter-tight-v7-latin-regular.woff2') format('woff2'); 
+        }
+        /* inter-tight-500italic - latin */
+        @font-face {
+        font-display: swap;
+        font-family: 'Inter Tight';
+        font-style: italic;
+        font-weight: 500;
+        src: url('assets/fonts/inter-tight-v7-latin-500italic.woff2') format('woff2'); 
+        }
+        /* inter-tight-600 - latin */
+        @font-face {
+        font-display: swap; 
+        font-family: 'Inter Tight';
+        font-style: normal;
+        font-weight: 600;
+        src: url('assets/fonts/inter-tight-v7-latin-600.woff2') format('woff2'); 
+        }
+        /* inter-tight-700 - latin */
+        @font-face {
+        font-display: swap; 
+        font-family: 'Inter Tight';
+        font-style: normal;
+        font-weight: 700;
+        src: url('assets/fonts/inter-tight-v7-latin-700.woff2') format('woff2'); 
+        }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- Header  ================================= START -->
+    <header>
+        <div class="container flex-between">
+            <div class="site-logo">
+                <a href="#"><img src="assets/img/Datarecovve.svg" class="img-fluid" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown"><a href="#" class="active">Solutions</a>
+                        <ul>
+                            <li>
+                               <a href="#">How to</a>
+                            </li>
+                            <li>
+                               <a href="#">Reviews</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"> Submenu</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Top 10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP MySQL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                         </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Company</a>
+                        <ul>
+                            <li>
+                               <a href="#">How to</a>
+                            </li>
+                            <li>
+                               <a href="#">Reviews</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"> Submenu</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Top 10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP MySQL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                         </ul>
+                    </li>
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+                <div class="cancel-btn" onclick="toggleButtons()">
+                     <svg fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+                        </path>
+                     </svg>
+                  </div>
+            </nav>
+        
+             <div class="right-header flex-gap">
+                <div class="search-form">
+                    <div class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                   <div class="search-overlay">
+                    <span class="closebtn" title="close overlay"><svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256z" fill="#fff"/></svg>
+                    </span>
+                    <div class="search-input">
+                        <form action="" class="flex">
+                            <input type="search" name="" placeholder="what can we help you?" id="">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667M14 14l-2.9-2.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                   </div>
+                </div>
+                <a href="#" class="btn-fill">Contact Us</a>
+                <div class="toggle-slide-btn" onclick="toggleButtons()">
+                    <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+                       </path>
+                    </svg>
+                 </div>
+             </div>
+        </div>
+    </header>
+        <!-- Header  ======================-============ END -->
+
+
+        <!-- Main layout Sections ===================== START -->
+        <main>
+            <!-- Section 1 ================= START -->
+            <div class="hero-header">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="heading-title">
+                            We manage your IT, so you can manage your business.
+                        </div>
+                        <div class="sub-htitle">
+                            Take charge of your business continuity with innovative IT solutions
+                        </div>
+                        <div class="dual-button flex-gap">
+                            <a href="#" class="btn-fill">Schedule a Free Consultation</a>
+                            <a href="#" class="btn-light">Services</a>
+                        </div>
+                    </div>
+                            <div class="hero-img">
+                                <img src="assets/img/GettyImages-618762080-1.webp" class="img-fluid" alt="">
+                            </div>
+                    </div>
+            </div>
+           
+            <!-- Section 1 =========== END -->
+            <!-- Section 2 ================= START -->
+            <div class="container">
+                <div class="sec-2 grid">
+                    <div class="review flex">
+                        <div class="flex">
+                            <span>REVIEWED ON</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12.445" width="14" height="12.445"><path fill="#ff3d2e" d="M7.703.438a.776.776 0 0 0-1.4 0L4.739 3.653l-3.49.515c-.291.043-.535.248-.624.528s-.017.588.192.795L3.35 7.997l-.598 3.542a.778.778 0 0 0 1.135.816l3.118-1.665 3.117 1.665a.778.778 0 0 0 1.135-.816l-.599-3.542 2.533-2.506a.778.778 0 0 0-.433-1.323l-3.493-.515z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12.445" width="14" height="12.445"><path fill="#ff3d2e" d="M7.703.438a.776.776 0 0 0-1.4 0L4.739 3.653l-3.49.515c-.291.043-.535.248-.624.528s-.017.588.192.795L3.35 7.997l-.598 3.542a.778.778 0 0 0 1.135.816l3.118-1.665 3.117 1.665a.778.778 0 0 0 1.135-.816l-.599-3.542 2.533-2.506a.778.778 0 0 0-.433-1.323l-3.493-.515z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12.445" width="14" height="12.445"><path fill="#ff3d2e" d="M7.703.438a.776.776 0 0 0-1.4 0L4.739 3.653l-3.49.515c-.291.043-.535.248-.624.528s-.017.588.192.795L3.35 7.997l-.598 3.542a.778.778 0 0 0 1.135.816l3.118-1.665 3.117 1.665a.778.778 0 0 0 1.135-.816l-.599-3.542 2.533-2.506a.778.778 0 0 0-.433-1.323l-3.493-.515z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12.445" width="14" height="12.445"><path fill="#ff3d2e" d="M7.703.438a.776.776 0 0 0-1.4 0L4.739 3.653l-3.49.515c-.291.043-.535.248-.624.528s-.017.588.192.795L3.35 7.997l-.598 3.542a.778.778 0 0 0 1.135.816l3.118-1.665 3.117 1.665a.778.778 0 0 0 1.135-.816l-.599-3.542 2.533-2.506a.778.778 0 0 0-.433-1.323l-3.493-.515z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12.445" width="14" height="12.445"><path fill="#ff3d2e" d="M7.703.438a.776.776 0 0 0-1.4 0L4.739 3.653l-3.49.515c-.291.043-.535.248-.624.528s-.017.588.192.795L3.35 7.997l-.598 3.542a.778.778 0 0 0 1.135.816l3.118-1.665 3.117 1.665a.778.778 0 0 0 1.135-.816l-.599-3.542 2.533-2.506a.778.778 0 0 0-.433-1.323l-3.493-.515z"/></svg>
+                            </span>
+                        </div>
+                        <div class="flex">
+                            <img src="assets/img/clutch-logo.svg" alt="">
+                            <span><a href="#">31 REVIEWS</a></span>
+                        </div>
+                    </div>
+                 <div class="grid">
+                    <div class="counter-box">
+                        <div class="flex">
+                           <span class="h4" id="counter1">0</span>
+                           <span class="h6">Years</span>
+                        </div>
+                           <div>
+                              Proven Track Record
+                           </div>
+                       </div>
+                       <div class="counter-box">
+                           <div class="flex">
+                               <span class="h4" id="counter2">0</span>
+                               <span class="h6">%</span>
+                            </div>
+                            <div>
+                               Customer Satisfaction
+                            </div>
+                       </div>
+                       <div class="counter-box">
+                           <div class="flex">
+                               <span class="h4" id="counter3">0</span>
+                               <span class="h6">Projects</span>
+                            </div>
+                            <div>
+                               We Have Completed
+                            </div>
+                       </div>
+                       <div class="counter-box">
+                           <div class="flex">
+                               <span class="h4" id="counter4">0</span>
+                               <span class="h6">Mins</span>
+                            </div>
+                            <div>
+                               Average Answer Time
+                            </div>
+                       </div>
+                 </div>
+                </div>
+            </div>
+            <!-- Section 2 =========== END -->
+
+             <!-- Section 3 =========== START -->
+           <div class="background-overlay-1">
+            <div class="container sec-space">
+                <div class="h1 py-40 text-center">Simplifying IT for a world.</div>
+              <div class="row row-gap">
+                <div class="col-lg-3 col-md-6">
+                  <div class="card-box shadow">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <a href="#" class="h6">Cost-effectiveness</a>
+                        <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                        <div class="learn-more">
+                          <a href="#">Free Download <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                         </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card-box shadow">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <a href="#" class="h6">Cost-effectiveness</a>
+                        <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                        <div class="learn-more">
+                          <a href="#">Free Download <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                         </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card-box shadow">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <a href="#" class="h6">Cost-effectiveness</a>
+                        <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                        <div class="learn-more">
+                          <a href="#">Free Download <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                         </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card-box shadow">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <a href="#" class="h6">Cost-effectiveness</a>
+                        <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                        <div class="learn-more">
+                          <a href="#">Free Download <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                         </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+           </div>
+             <!-- Section 3 =========== END -->
+
+
+             <div class="container sec-space companies-sec">
+              <div class="row align-center">
+                  <div class="col-lg-5">
+                      <div class="sep">
+                          <div class="sub-title">WHERE WE DO</div>
+                          <div class="h1">Recognized by the best</div>
+                      </div>
+                      <p>The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.</p>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="companies-logo grid">
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                        <div class="cm-logo">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/best-seo-1.webp" alt="">
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+              <!-- Section 4 =========== START -->
+           <div class="background-overlay sec-space">
+            <div class="container">
+                <div class="sep">
+                    <div class="sub-title">HOW WE DO</div>
+                    <div class="h1">Solutions</div>
+                </div>
+                <div class="row row-gap">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h6">Cost-effectiveness</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                  <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h6">IT Consulting & Advisory</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                  <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h6">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                  <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h6">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                  <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h6">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                  <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h6">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                  <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-fill">View All Solution</a>
+              </div>
+           </div>
+              <!-- Section 4 =========== END -->
+
+              <div class="container sec-space"> 
+                <div class="call-to flex">
+                    <div class="h3">Simplifying IT<br>
+                        for a complex world.</div>
+                        <a href="#" class="btn-fill">Schedule a Free Consultation</a>
+                  </div>
+            </div>
+
+            <div class="container sec-space companies-sec">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="sep">
+                            <div class="sub-title">WHY CHOOSE US</div>
+                            <div class="h1">Experience Excellence Service</div>
+                        </div>
+                        <p>The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.</p>
+
+                        <ul class="quality-points">
+                            <li>
+                                <span class="points-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.81154 11.1758L10.6757 2.48138C11.4444 2.48138 12.1815 2.78672 12.725 3.33023C13.2685 3.87373 13.5739 4.61088 13.5739 5.37952V9.24369H19.0417C19.3217 9.24052 19.5991 9.29828 19.8547 9.41296C20.1102 9.52764 20.3377 9.69651 20.5215 9.90786C20.7053 10.1192 20.8409 10.368 20.919 10.637C20.9971 10.9059 21.0158 11.1887 20.9738 11.4656L19.6406 20.16C19.5707 20.6207 19.3367 21.0406 18.9817 21.3424C18.6266 21.6442 18.1745 21.8075 17.7085 21.8023H6.81154M6.81154 11.1758V21.8023M6.81154 11.1758H3.91341C3.40099 11.1758 2.90956 11.3793 2.54722 11.7417C2.18488 12.104 1.98132 12.5954 1.98132 13.1079V19.8702C1.98132 20.3826 2.18488 20.874 2.54722 21.2364C2.90956 21.5987 3.40099 21.8023 3.91341 21.8023H6.81154" stroke="#E11F26" stroke-width="1.93209" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="h6">Uncompromising Quality</div>
+                                    <p>Netus feugiat vitae enim enim in viverra. Id at sagittis cras pretium dictum nec netus. Ante dolor quis convallis.</p>
+                                </div>
+                             </li>
+                            <li>
+                                <span class="points-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.81154 11.1758L10.6757 2.48138C11.4444 2.48138 12.1815 2.78672 12.725 3.33023C13.2685 3.87373 13.5739 4.61088 13.5739 5.37952V9.24369H19.0417C19.3217 9.24052 19.5991 9.29828 19.8547 9.41296C20.1102 9.52764 20.3377 9.69651 20.5215 9.90786C20.7053 10.1192 20.8409 10.368 20.919 10.637C20.9971 10.9059 21.0158 11.1887 20.9738 11.4656L19.6406 20.16C19.5707 20.6207 19.3367 21.0406 18.9817 21.3424C18.6266 21.6442 18.1745 21.8075 17.7085 21.8023H6.81154M6.81154 11.1758V21.8023M6.81154 11.1758H3.91341C3.40099 11.1758 2.90956 11.3793 2.54722 11.7417C2.18488 12.104 1.98132 12.5954 1.98132 13.1079V19.8702C1.98132 20.3826 2.18488 20.874 2.54722 21.2364C2.90956 21.5987 3.40099 21.8023 3.91341 21.8023H6.81154" stroke="#E11F26" stroke-width="1.93209" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="h6">Uncompromising Quality</div>
+                                    <p>Netus feugiat vitae enim enim in viverra. Id at sagittis cras pretium dictum nec netus. Ante dolor quis convallis.</p>
+                                </div>
+                             </li>
+                            <li>
+                                <span class="points-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.81154 11.1758L10.6757 2.48138C11.4444 2.48138 12.1815 2.78672 12.725 3.33023C13.2685 3.87373 13.5739 4.61088 13.5739 5.37952V9.24369H19.0417C19.3217 9.24052 19.5991 9.29828 19.8547 9.41296C20.1102 9.52764 20.3377 9.69651 20.5215 9.90786C20.7053 10.1192 20.8409 10.368 20.919 10.637C20.9971 10.9059 21.0158 11.1887 20.9738 11.4656L19.6406 20.16C19.5707 20.6207 19.3367 21.0406 18.9817 21.3424C18.6266 21.6442 18.1745 21.8075 17.7085 21.8023H6.81154M6.81154 11.1758V21.8023M6.81154 11.1758H3.91341C3.40099 11.1758 2.90956 11.3793 2.54722 11.7417C2.18488 12.104 1.98132 12.5954 1.98132 13.1079V19.8702C1.98132 20.3826 2.18488 20.874 2.54722 21.2364C2.90956 21.5987 3.40099 21.8023 3.91341 21.8023H6.81154" stroke="#E11F26" stroke-width="1.93209" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="h6">Uncompromising Quality</div>
+                                    <p>Netus feugiat vitae enim enim in viverra. Id at sagittis cras pretium dictum nec netus. Ante dolor quis convallis.</p>
+                                </div>
+                             </li>
+                        
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="counter-w-img flex">
+                        <img src="assets/img/laptop-img.png" class="img-fluid" alt="">
+                      <div class="grid counter2">
+                        <div class="counter-box">
+                            <div class="flex">
+                               <span class="h4" id="counter5">0</span>
+                               <span class="h6">+</span>
+                            </div>
+                               <div>
+                                  Proven Track Record
+                               </div>
+                           </div>
+                           <div class="counter-box">
+                               <div class="flex">
+                                   <span class="h4" id="counter6">0</span>
+                                   <span class="h6">+</span>
+                                </div>
+                                <div>
+                                   Customer Satisfaction
+                                </div>
+                           </div>
+                           <div class="counter-box">
+                               <div class="flex">
+                                   <span class="h4" id="counter7">0</span>
+                                   <span class="h6">+</span>
+                                </div>
+                                <div>
+                                   We Have Completed
+                                </div>
+                           </div>
+                           <div class="counter-box">
+                               <div class="flex">
+                                   <span class="h4" id="counter8">0</span>
+                                   <span class="h6">+</span>
+                                </div>
+                                <div>
+                                   Average Answer Time
+                                </div>
+                           </div>
+                     </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+
+              <!-- Section 5 =========== START -->
+              <div class="container sec-space">
+                <div class="sep">
+                    <div class="sub-title">WHERE WE DO</div>
+                    <div class="h1">Success Stories</div>
+                </div>
+                <div class="row row-gap">
+                    <div class="col-lg-4">
+                        <div class="blog-card">
+                            <div class="img-placeholder"><a href="#"><img src="https://ityug247.com/wp-content/uploads/2024/04/security-features-for-mobile-phones.webp" class="img-fluid" alt=""></a></div>
+                            <div class="card-content">
+                                <a href="#" class="title-h">Major Insurance Provider Saves $750k per Month With Big Data Migration</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                                <div class="learn-more">
+                                    <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                                   </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-card">
+                            <div class="card-content">
+                                <div class="img-placeholder"><a href="#"><img src="https://ityug247.com/wp-content/uploads/2024/03/software-development.webp" class="img-fluid" alt=""></a></div>
+                                <a href="#" class="title-h">Maximizing Efficiency with Proper Technology Implementation – Coffee Success Story</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                           <div class="blog-card">
+                            <div class="card-content">
+                                <div class="img-placeholder"><a href="#"><img src="https://ityug247.com/wp-content/uploads/2024/03/vps-website-hosting.webp" class="img-fluid" alt=""></a></div>
+                                <a href="#" class="title-h">Strategic Move to an AI-supported application for Public Safety Travel App in London</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="12" height="12" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z" fill="#000"></path></svg></a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- Section 5 =========== END -->
+
+            <!-- Section 6 testimonial =========== START -->
+              <div class="container sec-space">
+                <div class="text-center">
+                    <div class="h2">Our Testimonials</div>
+                    <div class="slider slider-name-second">
+                        <div class="slider-wrap ">
+                          <div class="slide-card" style="width: 1116px; margin-right: 30px;">
+                            <div class="testimonial">
+                                <div class="text-center">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.486 35.33a8.65 8.65 0 1 0 0-17.3 8.65 8.65 0 0 0 0 17.3m6.448-30.608A19.04 19.04 0 0 0 1.848 17.466a11.92 11.92 0 0 1 7.638-2.762q.72 0 1.436.086A11.72 11.72 0 0 1 17.2 9.084a2.3 2.3 0 0 0 1.504-2.14 2.28 2.28 0 0 0-2.772-2.222M29.944 35.33a8.65 8.65 0 1 0-.002-17.3 8.65 8.65 0 0 0 .004 17.3m6.448-30.608a19.04 19.04 0 0 0-14.086 12.744 11.92 11.92 0 0 1 7.638-2.762q.72 0 1.438.086a11.72 11.72 0 0 1 6.276-5.706 2.3 2.3 0 0 0 1.504-2.14 2.28 2.28 0 0 0-.854-1.774 2.28 2.28 0 0 0-1.918-.448" fill="#f9d2d4"/></svg>
+                                </div>
+                              <p> It is a long established fact that a reader will be distracted by the readable content of a page when
+                                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                                of letters, as opposed to using 'Content here, content here. It is a long established fact that a reader
+                                will be distracted by the readable content of a page when looking at its layout. The point of using
+                                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                                here, content here.</p>
+                              <div class="square-author">
+                                <img src="https://getassist.net/wp-content/uploads/2023/10/Billy-Willson.webp" alt="">
+                                <div>
+                                  <span class="h6">Manpreet Kaur Sandhu</span>
+                                  <p>Writer</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slide-card slider-card-container" style="width: 1116px; margin-right: 30px;">
+                            <div class="testimonial">
+                                <div class="text-center">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.486 35.33a8.65 8.65 0 1 0 0-17.3 8.65 8.65 0 0 0 0 17.3m6.448-30.608A19.04 19.04 0 0 0 1.848 17.466a11.92 11.92 0 0 1 7.638-2.762q.72 0 1.436.086A11.72 11.72 0 0 1 17.2 9.084a2.3 2.3 0 0 0 1.504-2.14 2.28 2.28 0 0 0-2.772-2.222M29.944 35.33a8.65 8.65 0 1 0-.002-17.3 8.65 8.65 0 0 0 .004 17.3m6.448-30.608a19.04 19.04 0 0 0-14.086 12.744 11.92 11.92 0 0 1 7.638-2.762q.72 0 1.438.086a11.72 11.72 0 0 1 6.276-5.706 2.3 2.3 0 0 0 1.504-2.14 2.28 2.28 0 0 0-.854-1.774 2.28 2.28 0 0 0-1.918-.448" fill="#f9d2d4"/></svg>
+                                </div>
+                              <p> It is a long established fact that a reader will be distracted by the readable content of a page when
+                                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                                of letters, as opposed to using 'Content here, content here. It is a long established fact that a reader
+                                will be distracted by the readable content of a page when looking at its layout. The point of using
+                                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                                here, content here.</p>
+                              <div class="square-author">
+                                <img src="https://getassist.net/wp-content/uploads/2023/10/Billy-Willson.webp" alt="">
+                                <div>
+                                  <span class="h6">Manpreet Kaur Sandhu</span>
+                                  <p>Writer</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slide-card slider-card-container" style="width: 1116px; margin-right: 30px;">
+                         <div class="testimonial">
+                            <div class="text-center">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.486 35.33a8.65 8.65 0 1 0 0-17.3 8.65 8.65 0 0 0 0 17.3m6.448-30.608A19.04 19.04 0 0 0 1.848 17.466a11.92 11.92 0 0 1 7.638-2.762q.72 0 1.436.086A11.72 11.72 0 0 1 17.2 9.084a2.3 2.3 0 0 0 1.504-2.14 2.28 2.28 0 0 0-2.772-2.222M29.944 35.33a8.65 8.65 0 1 0-.002-17.3 8.65 8.65 0 0 0 .004 17.3m6.448-30.608a19.04 19.04 0 0 0-14.086 12.744 11.92 11.92 0 0 1 7.638-2.762q.72 0 1.438.086a11.72 11.72 0 0 1 6.276-5.706 2.3 2.3 0 0 0 1.504-2.14 2.28 2.28 0 0 0-.854-1.774 2.28 2.28 0 0 0-1.918-.448" fill="#f9d2d4"/></svg>
+                            </div>
+                              <p> It is a long established fact that a reader will be distracted by the readable content of a page when
+                                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                                of letters, as opposed to using 'Content here, content here. It is a long established fact that a reader
+                                will be distracted by the readable content of a page when looking at its layout. The point of using
+                                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                                here, content here.</p>
+                              <div class="square-author">
+                                <img src="https://getassist.net/wp-content/uploads/2023/10/Billy-Willson.webp" alt="">
+                                <div>
+                                  <span class="h6">Manpreet Kaur Sandhu</span>
+                                  <p>Writer</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="button-container">
+                          <button class="button-prev" id="previous-arrow" disabled="">
+                            <div>
+                              <svg width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m7.027 10.038 5.313-5.312a.934.934 0 0 1 1.324 0l.883.882a.934.934 0 0 1 0 1.325l-3.762 3.769 3.765 3.766a.934.934 0 0 1 0 1.324l-.882.887a.934.934 0 0 1-1.325 0l-5.312-5.313a.935.935 0 0 1-.004-1.328"></path>
+                                <path d="m7.027 10.038 5.313-5.312a.934.934 0 0 1 1.324 0l.883.882a.934.934 0 0 1 0 1.325l-3.762 3.769 3.765 3.766a.934.934 0 0 1 0 1.324l-.882.887a.934.934 0 0 1-1.325 0l-5.312-5.313a.935.935 0 0 1-.004-1.328" fill="#fff"></path>
+                              </svg>
+                            </div>
+                          </button>
+                          <button class="button-next" id="next-arrow">
+                            <div>
+                              <svg width="21" height="21" fill="none" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m14.101 11.345-5.3125 5.3125c-0.36719 0.3672-0.96094 0.3672-1.3242 0l-0.88281-0.8828c-0.36719-0.3672-0.36719-0.9609 0-1.3242l3.7656-3.7656-3.7656-3.7656c-0.36719-0.36719-0.36719-0.96094 0-1.3242l0.87891-0.89063c0.36718-0.36718 0.96093-0.36718 1.3242 0l5.3125 5.3125c0.3711 0.3672 0.3711 0.961 0.0039 1.3281z" fill="#fff"></path>
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            <!-- Section 6 =========== END -->
+
+            <!-- Section 7 =========== START -->
+       
+            <!-- Section 7 =========== END -->
+        </main>
+            <!-- Main layout Sections ====================== END -->
+            <!-- FOOTER START -->
+            <footer>
+                <div class="container">
+                    <div class="row row-gap">
+                        <div class="col-lg-4">
+                           <div class="left-part">
+                            <div class="site-logo">
+                                <a href="#"><img src="assets/img/Datarecovve.svg" class="img-fluid" alt=""></a>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layoutlong established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <ul class="social-media flex">
+                                <li>
+                                   <a href="#">
+                                      <svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 320 512"><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"></path></svg>
+                                   </a>
+                                </li>
+                                <li>
+                                   <a href="#">
+                                      <svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 512 512"><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"></path></svg>
+                                   </a>
+                                </li>
+                                <li>
+                                   <a href="#">
+                                      <svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path></svg>
+                                   </a>
+                                </li>
+                                <li>
+                                   <a href="#">
+                                      <svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3M447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path></svg>
+                                   </a>
+                                </li>
+                             </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-title">
+                                Popular Categories
+                            </div>
+                            <ul class="footer-list float-50">
+                                <li>
+                                    <a href="#">Social Media</a>
+                                </li>
+                                <li>
+                                    <a href="#">Browsers</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-6">
+                            <div class="footer-title">
+                                Company links
+                            </div>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Why Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Team</a>
+                                </li>
+                                <li>
+                                    <a href="#">Carrer</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="footer-title">
+                                Company links
+                            </div>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Why Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Team</a>
+                                </li>
+                                <li>
+                                    <a href="#">Carrer</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <p class="disclaimer"> <strong>Disclaimer : </strong>All the information, media, links, and other data provided on the website are
+                        meant for reference as well as information purposes only. We do not claim the rightness of the information as we have utilized the web portals to collect and sort the information. Any user continuing with the steps and services is solely
+                        responsible to check for the correctness of the resources. We do not take any liability for the errors,
+                        omissions, and services. Furthermore, we are not associated with the third-party sites mentioned and hold
+                        no authority over the service offered by them.
+                     </p> -->
+                     <div class="copyright">©Copyright 2024 Datarecovve. All Rights Reserved.</div>
+                </div>
+            </footer>
+            <!-- FOOTER END -->
+
+             <!-- <section style="margin-top:50px;"></section> -->
+    
+
+        <!-- Scroll to Top Button ==================== START -->
+        <button title="back to top button" id="scroll_to_top">
+            <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-width="0" />
+                <g stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
+                    fill-rule="evenodd"
+                />
+            </svg>
+        </button>
+        <!-- Scroll to Top Button ====================== END -->
+
+        
+        <!-- Scripts Links =========================== START -->
+        <script src="assets/js/script.js"></script>
+
+    </body>
+</html>
